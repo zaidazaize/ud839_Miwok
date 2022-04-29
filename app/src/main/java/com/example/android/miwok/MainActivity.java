@@ -18,6 +18,7 @@ package com.example.android.miwok;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 // import android.support.v7.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -29,26 +30,36 @@ public class MainActivity extends AppCompatActivity {
 
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
+
+        findViewById(R.id.numbers).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, NumberActivity.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.family).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, FamilyActivity.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.colors).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ColorsActivity.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.phrases).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, PhrasesActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
-    public void numbersActivity(View view) {
-        Intent intent = new Intent(this, NumberActivity.class);
-        startActivity(intent);
-    }
-
-    public void familyActivity(View view) {
-        Intent intent = new Intent(this, FamilyActivity.class);
-        startActivity(intent);
-    }
-
-    public void colorsActivity(View view) {
-        Intent intent = new Intent(this, ColorsActivity.class);
-        startActivity(intent);
-
-    }
-
-    public void phrasesActivity(View view) {
-        Intent intent = new Intent(this, PhrasesActivity.class);
-        startActivity(intent);
-    }
 }

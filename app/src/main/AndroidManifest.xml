@@ -10,14 +10,18 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".ColorsActivity"
+            android:label="@string/category_colors"
             android:exported="false" />
         <activity
             android:name=".FamilyActivity"
+            android:label="@string/category_family"
             android:exported="false" />
         <activity
+            android:label="@string/category_numbers"
             android:name=".NumberActivity"
             android:exported="false" />
         <activity
+            android:label="@string/category_phrases"
             android:name=".PhrasesActivity"
             android:exported="false" />
         <activity
