@@ -1,20 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
-    android:padding="10dp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/list_itemNumbersEng"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/list_itemimageview"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="eng word"/>
+          />
 
-    <TextView
-        android:id="@+id/list_itemNumbersMiwok"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="miwok word" />
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/list_itemNumbersEng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="eng word" />
+
+        <TextView
+            android:id="@+id/list_itemNumbersMiwok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="miwok word" />
+    </LinearLayout>
 </LinearLayout>

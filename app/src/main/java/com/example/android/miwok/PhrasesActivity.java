@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.example.android.miwok.adapter.NumberAdapter;
 import com.example.android.miwok.dataclass.LangData;
@@ -18,13 +19,24 @@ public class PhrasesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_number);
         //create a list of word
-        ArrayList<LangData> dataSourse = new ArrayList<>();
-        for(int i=0;i<10;i++){
-            dataSourse.add(new LangData(Integer.toString(i)));
-        }
+        // Create a list of words
+        Log.d("phrases activity", "before array");
+        ArrayList<LangData> words = new ArrayList<>();
+        words.add(new LangData("Where are you going?", "minto wuksus"));
+        words.add(new LangData("What is your name?", "tinnә oyaase'nә"));
+        words.add(new LangData("My name is...", "oyaaset..."));
+        words.add(new LangData("How are you feeling?", "michәksәs?"));
+        words.add(new LangData("I’m feeling good.", "kuchi achit"));
+        words.add(new LangData("Are you coming?", "әәnәs'aa?"));
+        words.add(new LangData("Yes, I’m coming.", "hәә’ әәnәm"));
+        words.add(new LangData("I’m coming.", "әәnәm"));
+        words.add(new LangData("Let’s go.", "yoowutis"));
+        words.add(new LangData("Come here.", "әnni'nem"));
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.numbersrecycleview);
-        recyclerView.setAdapter(new NumberAdapter(dataSourse));
+        Log.d("phrases activity", "after recycler view");
+        recyclerView.setAdapter(new NumberAdapter(words));
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        Log.d("phrases activity", "after layoutmanager view");
 
     }
 }

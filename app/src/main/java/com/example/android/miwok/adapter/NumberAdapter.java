@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.android.miwok.R;
@@ -35,6 +36,9 @@ public class NumberAdapter extends RecyclerView.Adapter<NumberAdapter.NumberView
         LangData data = langData.get(position);
         holder.miwokTextView.setText(data.getMiwokWord());
         holder.engTextView.setText(data.getEngWord());
+        if (data.isImage) {
+            holder.imageView.setImageResource(data.getmImageResourseId());
+        }else holder.imageView.setVisibility(View.INVISIBLE);
     }
 
     @Override
@@ -44,10 +48,12 @@ public class NumberAdapter extends RecyclerView.Adapter<NumberAdapter.NumberView
 
     public static class NumberViewHolder extends RecyclerView.ViewHolder {
         public final TextView engTextView,miwokTextView;
+        public final ImageView imageView;
         public NumberViewHolder(@NonNull View itemView) {
             super(itemView);
             engTextView = itemView.findViewById(R.id.list_itemNumbersEng);
             miwokTextView = itemView.findViewById(R.id.list_itemNumbersMiwok);
+            imageView = itemView.findViewById(R.id.list_itemimageview);
         }
     }
 }

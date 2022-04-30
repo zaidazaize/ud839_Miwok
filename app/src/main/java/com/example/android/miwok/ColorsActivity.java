@@ -18,13 +18,18 @@ public class ColorsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_number);
 
-        //create a list of word
-        ArrayList<LangData> dataSourse = new ArrayList<>();
-        for(int i=0;i<10;i++){
-            dataSourse.add(new LangData(Integer.toString(i)));
-        }
+        // Create a list of words
+        ArrayList<LangData> words = new ArrayList<LangData>();
+        words.add(new LangData("red", "weṭeṭṭi", R.drawable.color_red));
+        words.add(new LangData("mustard yellow", "chiwiiṭә", R.drawable.color_mustard_yellow));
+        words.add(new LangData("dusty yellow", "ṭopiisә", R.drawable.color_dusty_yellow));
+        words.add(new LangData("green", "chokokki", R.drawable.color_green));
+        words.add(new LangData("brown", "ṭakaakki", R.drawable.color_brown));
+        words.add(new LangData("gray", "ṭopoppi", R.drawable.color_gray));
+        words.add(new LangData("black", "kululli", R.drawable.color_black));
+        words.add(new LangData("white", "kelelli", R.drawable.color_white));
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.numbersrecycleview);
-        recyclerView.setAdapter(new NumberAdapter(dataSourse));
+        recyclerView.setAdapter(new NumberAdapter(words));
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 }
