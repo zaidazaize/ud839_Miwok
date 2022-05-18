@@ -9,10 +9,12 @@
         android:id="@+id/list_itemimageview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        tools:src="@drawable/number_one"
           />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="3"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
@@ -28,4 +30,10 @@
             android:layout_height="wrap_content"
             tools:text="miwok word" />
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/list_itemimageviewplay"
+        android:src="@drawable/round_play_arrow_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </LinearLayout>
